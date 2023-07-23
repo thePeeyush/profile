@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+*{
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@font-face {
+  font-family: 'Savo-3D';
+  src: url(../font/Northstar3D-4D3x.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Savo-bold';
+  src: url(../font/NorthstarBold-mdWa.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Savo-out';
+  src: url(../font/NorthstarOutline-waw8.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Savo-reg';
+  src: url(../font/NorthstarRegular-9lEy.otf) format('opentype');
+}
+
+.savo-3d{
+  font-family: 'Savo-3D' ,sans-serif ;
+}
+.savo-bold{
+  font-family: 'Savo-bold',sans-serif;
+}
+.savo-out{
+  font-family: 'Savo-out' ,sans-serif;
+}
+.savo-reg{
+  font-family: 'Savo-reg' ,sans-serif ;
+}
