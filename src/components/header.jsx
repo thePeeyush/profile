@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <div className='p-4'>
         <Image
-            src="/r.png"
+            src="/jairam.png"
             width={200}
             height={100}
             alt='logo'
