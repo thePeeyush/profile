@@ -4,37 +4,38 @@ import React, { useEffect, useRef, useState } from "react";
 import "@/css/loading.css";
 
 export default function Loading({ counter }) {
-
-    const loaddivref = useRef(null);
+  const loaddivref = useRef(null);
 
   return (
     <div ref={loaddivref} className="flex flex-row overflow-hidden bg-white">
       <Longdiv paref={loaddivref} delay={1} />
+      <Longdiv paref={loaddivref} delay={1} />
       <Longdiv paref={loaddivref} delay={1.2} />
       <Longdiv paref={loaddivref} delay={1.4} />
       <Longdiv paref={loaddivref} delay={1.6} />
-      <Longdiv paref={loaddivref} delay={1.8} counter={counter} />
+      <Longdiv paref={loaddivref} delay={1.8} />
       <Longdiv paref={loaddivref} delay={2.0} />
-      <Longdiv paref={loaddivref} delay={2.2} />
+      <Longdiv paref={loaddivref} delay={2.2} counter={counter} />
       <Longdiv paref={loaddivref} delay={2.4} />
+      <Longdiv paref={loaddivref} delay={2.6} />
       <Longdiv paref={loaddivref} delay={2.6} />
     </div>
   );
 }
 
-export const Longdiv = ({ delay, counter , paref }) => {
-  const [letter, setLetter] = useState(0);
+export const Longdiv = ({ delay, counter, paref }) => {
+  let [letter, setLetter] = useState("");
 
   useEffect(() => {
-    longdivref.current.style.animation = `uplift ${delay}s`;
-    let mindiv = document.getElementsByClassName('mindiv');
+    longdivref.current.style.animation = `uplift ${delay}s `;
+    let mindiv = document.getElementsByClassName("mindiv");
     if (counter !== undefined) {
       setLetter(counter);
       setTimeout(() => {
-            paref.current.style.backgroundColor = 'transparent';
-            for (let i = 0; i < mindiv.length; i++) {
-                mindiv[i].style.animation = `fuse ${delay}s forwards`;
-            }
+        paref.current.style.backgroundColor = "transparent";
+        for (let i = 0; i < mindiv.length; i++) {
+          mindiv[i].style.animation = `fuse ${delay-1}s forwards`;
+        }
       }, counter * 1000);
     }
   }, []);
@@ -58,11 +59,9 @@ export const Longdiv = ({ delay, counter , paref }) => {
       ref={longdivref}
       className="longdiv h-screen w-full bg-transparent  overflow-hidden"
     >
-      <div
-        className="w-full h-full text-center mindiv flex justify-center items-center border-r border-black bg-white"
-      >
+      <div className="w-full h-full text-center mindiv flex justify-center items-center border-r border-black bg-white">
         {counter !== undefined && (
-          <h1 className=" up mindiv savo-reg text-8xl text-black">{letter}</h1>
+          <h1 className=" up mindiv savo-reg text-8xl text-orange-500">{letter}</h1>
         )}
       </div>
     </div>

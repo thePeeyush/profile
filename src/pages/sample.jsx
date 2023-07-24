@@ -1,24 +1,39 @@
-import React from 'react';
-
 const Sample = () => {
-    return (
-        <div className="bg-black text-white h-screen flex items-center justify-center">
-          <div className="p-8">
-            <h1 className="text-4xl font-bold mb-4">Sample</h1>
-            <img
-              src="https://via.placeholder.com/300"
-              alt="Placeholder"
-              className="mb-4 rounded-lg"
-            />
-            <p className="text-lg mb-4">
-              This is a sample React page using Tailwind CSS for styling. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra, lorem id feugiat fringilla, augue justo ullamcorper orci, id facilisis felis nisi non purus. Sed id quam a neque lacinia sagittis. Suspendisse potenti. Sed fermentum mi at arcu ultricies auctor. Suspendisse sed risus eu sem dignissim viverra. Sed vitae fringilla sem, in congue urna. Maecenas volutpat, arcu eu dignissim blandit, est nisi facilisis odio, eget consectetur enim urna eu dolor. Vivamus euismod, sapien eu lobortis luctus, ligula tortor mattis ex, sit amet interdum metus neque sit amet mauris. Nullam eu felis nec tellus finibus semper.
-            </p>
-            <p className="text-lg">
-              Phasellus pellentesque dapibus velit id tempor. Integer ullamcorper ligula nec neque interdum fermentum. Ut nec quam et mauris fringilla venenatis. Integer nec sem eros. Maecenas euismod ex id iaculis euismod. Suspendisse potenti. Sed id finibus justo, eget maximus odio. Sed euismod massa nec auctor sollicitudin. Sed lacinia, tellus eu auctor sollicitudin, elit turpis dignissim mi, nec tristique elit arcu eu erat. Sed euismod feugiat ante, nec rhoncus arcu tempus non. Sed maximus eget quam id facilisis. Proin ac sagittis erat, vitae sodales odio. Nam sodales arcu quis ultrices elementum. Vivamus ut leo vitae justo consectetur scelerisque in a semper erat.
-            </p>
-          </div>
+
+  const wrap = () => {
+    document.querySelectorAll(".textref").forEach((e) => {
+      e.classList.add("wrap");
+      e.classList.remove("unwrap");
+      console.log(e);
+    });
+  };
+
+  const unwrap = () => {
+    document.querySelectorAll(".textref").forEach((e) => {
+      e.classList.add("unwrap");
+      e.classList.remove("wrap");
+      console.log(e);
+    });
+  };
+
+  return (
+   <div className="p-8">
+    <div
+        onMouseEnter={wrap}
+        onMouseLeave={unwrap}
+        className="text-[2.5rem] h-[5rem] -rotate-90 -translate-x-20 md:translate-x-20 md:rotate-0 md:text-[6rem] md:h-[12rem] lg:text-[8rem] lg:h-[16rem]  xl:text-[10rem] xl:h-[20rem] leading-none overflow-hidden mt-10 "
+      >
+        <div className=" max-h-[50%] overflow-hidden">
+          <h1 className=" unwrap  textref  savo-reg">tech</h1>
+          <h1 className="unwrap   textref savo-out">the</h1>
         </div>
-      );
-    };
+        <div className=" max-h-[50%] overflow-hidden">
+          <h1 className=" unwrap textref savo-out">Person</h1>
+          <h1 className="unwrap  textref savo-reg">Peeyush</h1>
+        </div>
+      </div>
+   </div>
+  );
+};
 
 export default Sample;

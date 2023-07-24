@@ -14,9 +14,6 @@ module.exports = {
       },
       fontFamily: {
         custom: ['Savo-3D', 'sans-serif'],
-        custom: ['Savo-out', 'sans-serif'],
-        custom: ['Savo-reg', 'sans-serif'],
-        custom: ['Savo-bold', 'sans-serif'],
       },
 
     },
