@@ -21,8 +21,8 @@ const Sample = () => {
     <div
         onMouseEnter={wrap}
         onMouseLeave={unwrap}
-        className="text-[2.5rem] h-[5rem] -rotate-90 -translate-x-20 md:translate-x-20 md:rotate-0 md:text-[6rem] md:h-[12rem] lg:text-[8rem] lg:h-[16rem]  xl:text-[10rem] xl:h-[20rem] leading-none overflow-hidden mt-10 "
-      >
+        className="text-[4rem] h-[8rem] min-w-fit max-w-4xl -rotate-90 -translate-x-20 md:translate-x-20 md:rotate-0 md:text-[6rem] md:h-[12rem] lg:text-[8rem] lg:h-[16rem]  xl:text-[10rem] xl:h-[20rem] leading-none overflow-hidden mt-10 "
+      > 
         <div className=" max-h-[50%] overflow-hidden">
           <h1 className=" unwrap  textref  savo-reg">tech</h1>
           <h1 className="unwrap   textref savo-out">the</h1>

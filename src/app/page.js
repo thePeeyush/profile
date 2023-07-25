@@ -26,7 +26,7 @@ export default function Home() {
       alt="image"
       width={500}
       height={500}
-      className=" w-screen h-screen fixed top-0 left-0 -rotate-45 z-0"
+      className=" w-screen h-screen fixed top-0 left-0 rotate-90 md:-rotate-45 z-0"
     />
     <Ribbon/>
     <Cursor/>

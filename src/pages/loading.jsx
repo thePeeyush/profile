@@ -5,22 +5,45 @@ import "@/css/loading.css";
 
 export default function Loading({ counter }) {
   const loaddivref = useRef(null);
+  let [isWide , setIsWide] = useState(false)
+  useEffect(()=>{
+    if (screen.width > 500 ) {
+      setIsWide(true);
+    }
+  })
 
   return (
     <div ref={loaddivref} className="flex flex-row overflow-hidden bg-white">
+      {isWide && <Up/>}
+      <Longdiv paref={loaddivref} delay={2.0} />
+      <Longdiv paref={loaddivref} delay={2.2} counter={counter} />
+      <Longdiv paref={loaddivref} delay={2.4} />
+      {isWide && <Down/>}
+    </div>
+  );
+}
+
+const Up= ({loaddivref})=>{
+  return(
+    <>
+      
       <Longdiv paref={loaddivref} delay={1} />
       <Longdiv paref={loaddivref} delay={1} />
       <Longdiv paref={loaddivref} delay={1.2} />
       <Longdiv paref={loaddivref} delay={1.4} />
       <Longdiv paref={loaddivref} delay={1.6} />
       <Longdiv paref={loaddivref} delay={1.8} />
-      <Longdiv paref={loaddivref} delay={2.0} />
-      <Longdiv paref={loaddivref} delay={2.2} counter={counter} />
-      <Longdiv paref={loaddivref} delay={2.4} />
+    </>
+  )
+}
+
+const  Down = ({loaddivref}) =>{
+  return(
+    <>
       <Longdiv paref={loaddivref} delay={2.6} />
       <Longdiv paref={loaddivref} delay={2.6} />
-    </div>
-  );
+    </>
+  )
 }
 
 export const Longdiv = ({ delay, counter, paref }) => {
