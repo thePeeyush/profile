@@ -24,9 +24,9 @@ export default function Home() {
     <Image
       src='/tyre5.png'
       alt="image"
-      width={500}
-      height={500}
-      className=" w-screen h-screen fixed top-0 left-0 rotate-90 md:-rotate-45 z-0"
+      width={0}
+      height={0}
+      className=" md:w-screen md:h-screen fixed top-0 left-0 -rotate-45 z-0"
     />
     <Ribbon/>
     <Cursor/>
