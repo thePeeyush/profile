@@ -20,13 +20,13 @@ export default function Home() {
   });
 
   return (
-    <div className=" bg-black">
+    <>
     <Image
       src='/tyre5.png'
       alt="image"
-      width={0}
+      width={10}
       height={0}
-      className=" md:w-screen md:h-screen fixed top-0 left-0 -rotate-45 z-0"
+      className=" w-screen h-screen fixed top-0 left-0 -rotate-45 z-0"
     />
     <Ribbon/>
     <Cursor/>
@@ -40,6 +40,6 @@ export default function Home() {
       <Sample/>
       <Base/> 
       </div>
-    </div>
+    </>
   );
 }
