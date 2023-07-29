@@ -13,7 +13,7 @@ export default function Loading({ counter }) {
   })
 
   return (
-    <div ref={loaddivref} className="flex flex-row overflow-hidden bg-white">
+    <div ref={loaddivref} className=" z-50 flex flex-row overflow-hidden fixed w-full bg-white">
       {isWide && <Up/>}
       <Longdiv paref={loaddivref} delay={2.0} />
       <Longdiv paref={loaddivref} delay={2.2} counter={counter} />
@@ -50,6 +50,7 @@ export const Longdiv = ({ delay, counter, paref }) => {
   let [letter, setLetter] = useState("");
 
   useEffect(() => {
+    
     longdivref.current.style.animation = `uplift ${delay}s `;
     let mindiv = document.getElementsByClassName("mindiv");
     if (counter !== undefined) {
@@ -80,7 +81,7 @@ export const Longdiv = ({ delay, counter, paref }) => {
   return (
     <div
       ref={longdivref}
-      className="longdiv h-screen w-full bg-transparent  overflow-hidden"
+      className="longdiv h-screen w-full bg-transparent  overflow-hidden "
     >
       <div className="w-full h-full text-center mindiv flex justify-center items-center border-r border-black bg-white">
         {counter !== undefined && (

@@ -15,6 +15,10 @@ body {
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 @font-face {
   font-family: 'Savo-3D';
   src: url(../font/Northstar3D-4D3x.otf) format('opentype');
@@ -84,4 +88,23 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+
+.pdiv.changed-bg{
+  transition: ease-in 2s;
+  background: rgb(60, 60, 60) ;
+  color: black;
+}
+
+.ostrap:hover > .strap{
+  transition: ease-in-out .6s;
+  transform: translateY(0%);
+  z-index: 0;
+
+}
+
+.strap{
+  transition: ease-in-out .5s;
+  transform: translateY(100%);
+  z-index: 0;
 }

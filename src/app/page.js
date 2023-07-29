@@ -3,15 +3,18 @@
 import Base from "@/components/base";
 import Cursor from "@/components/cursor";
 import Header from "@/components/header";
-import Intro from "@/components/intro";
+import Intro from "@/pages/intro";
+import Projects from "@/pages/projects";
 import Ribbon from "@/components/ribbon";
-import Loading from "@/pages/loading";
 import Sample from "@/pages/sample";
 import Image from "next/image";
+import Skills from "@/pages/skills";
+import Footer from "@/pages/footer";
 import React, { useEffect, useState } from "react";
+import Loading from "@/pages/loading";
 
 export default function Home() {
-  let counter = 1;
+  let counter = 4;
 
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -44,6 +47,9 @@ export default function Home() {
       </div>
       <div>
         <Intro/>
+        <Skills/>
+        <Projects/>
+        <Footer/>
       </div>
     </>
   );

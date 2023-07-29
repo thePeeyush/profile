@@ -24,6 +24,6 @@ export default function Cursor() {
      }
 
   return (
-    <div ref={cursorref} className=' w-10 h-10 border z-50 rounded-full absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 mycursor'></div>
+    <div ref={cursorref} className=' w-10 h-10 border z-50 rounded-full fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 mycursor'></div>
   )
 }
