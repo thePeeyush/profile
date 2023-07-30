@@ -15,6 +15,7 @@ import Loading from "@/pages/loading";
 
 export default function Home() {
   let counter = 4;
+  const [image, setImage] = useState("");
 
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -25,6 +26,17 @@ export default function Home() {
 
   return (
     <>
+    {
+      image !== "" && (
+        <Image
+        src={image}
+        alt="project"
+        width={600}
+        height={600}
+        className="fixed bottom-0 right-0  ease-in-out  -rotate-6 translate-x-32 translate-y-10 shadow-md z-50"
+      />
+      )
+    }
     <Image
       src='/bubble.gif'
       alt="bg"
@@ -33,7 +45,6 @@ export default function Home() {
       className="absolute top-0 right-[15%] rounded-lg m-5 -z-40"
     />
     <Ribbon/>
-    <Cursor/>
       {isLoading && (
         <div className=" absolute top-0 left-0 w-screen h-screen z-50">
           <Loading counter={counter} />
@@ -48,7 +59,7 @@ export default function Home() {
       <div>
         <Intro/>
         <Skills/>
-        <Projects/>
+        <Projects setImage={setImage}/>
         <Footer/>
       </div>
     </>

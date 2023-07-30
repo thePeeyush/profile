@@ -1,10 +1,12 @@
 import Project from '@/components/project';
+import data from './projects.json';
 import React, { useRef, useEffect, useState } from 'react';
 
-export default function Projects() {
+export default function Projects({setImage}) {
   const targetDivRef = useRef(null);
   const [bgColor, setBgColor] = useState('black');
-  const [color, setColor] = useState('white');
+  const [opacity, setOpacity] = useState(0);
+
 
   const handleScroll = () => {
     if (targetDivRef.current) {
@@ -14,22 +16,18 @@ export default function Projects() {
       const divHeight = targetDivRef.current.offsetHeight;
       const percentInView = (visibleHeight / divHeight) * 100;
 
-      if (percentInView >= 80) {
+      if (percentInView >= 60) {
         setBgColor('white');
-        setColor('black');
-      } else if (percentInView >= 70) {
-        setBgColor('rgba(255, 255, 255, 0.85)');
-        setColor('rgba(0, 0, 0, 0.85)');
-      } else if (percentInView >= 60) {
-        setBgColor('rgba(255, 255, 255, 0.65)');
-        setColor('rgba(0, 0, 0, 0.65)');
-      } else if (percentInView >= 50) {
-        setBgColor('rgba(255, 255, 255, 0.45)');
+        setOpacity(100)
       } else if (percentInView >= 40) {
-        setBgColor('rgba(255, 255, 255, 0.25)');
+        setBgColor('gray');
+        setOpacity(40)
+      } else if (percentInView >= 20) {
+        setBgColor('rgba(0, 0, 0, 0.555)');
+        setOpacity(20)
       } else {
         setBgColor('black');
-        setColor('white')
+        setOpacity(0)
       }
     }
   };
@@ -39,15 +37,27 @@ export default function Projects() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(()=>{
+    document.body.style.backgroundColor = bgColor;
+    document.body.style.transition = 'background-color ease 0.3s';
+  },[bgColor])
+
   return (
-    <div ref={targetDivRef} style={{ backgroundColor: bgColor, color : color, transition: 'background-color 0.3s' }} className=' my-32 h-full'>
-      <div className="flex flex-col h-screen w-screen justify-end items-center relative">
-        <Project text={'hvvm school'} href={'https://hvvm.netlify.app'} />
-        <Project text={'carry Gito'} href={'https://hvvm.netlify.app'} />
-        <Project text={'yo yo bike'} href={'https://hvvm.netlify.app'} />
-        <Project text={'systumm'} href={'https://hvvm.netlify.app'} />
-        <Project text={'like subscribe'} href={'https://hvvm.netlify.app'} />
+    <>
+      
+
+      <div ref={targetDivRef} className={`text-black my-80 h-full opacity-${opacity}`}>
+      <div className="flex flex-col h-screen w-screen justify-end items-center">
+        {
+          data.projects.map((item , index )=>{
+            return(
+              <Project text={item.title} href={item.href} key={index} setImage={setImage} image={item.image}/>
+            )
+          })
+        }
       </div>
     </div>
+    </>
+    
   );
 };

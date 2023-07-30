@@ -1,0 +1,25 @@
+{
+    "projects": [
+        
+        {
+            "title": "carryGito",
+            "href": "https://carrygito.vercel.app/",
+            "image": "/carry.png"
+        },
+        {
+            "title": "HVVM",
+            "href": "https://hvvm.netlify.app",
+            "image": "/hvvm.png"
+        },
+        {
+            "title": "Tasklist",
+            "href": "https://pdtasklist.netlify.app/",
+            "image": "/task.png"
+        },
+        {
+            "title": "XOgame",
+            "href": "https://pdxogame.vercel.app/",
+            "image": "/xo.png"
+        }
+    ]
+}

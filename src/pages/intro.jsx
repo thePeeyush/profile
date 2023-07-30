@@ -13,7 +13,7 @@ export default function Intro() {
         height={300}
         className='rounded w-full p-5 max-w-lg'
     />
-    <h1 className='savo-reg text-3xl md:text-6xl text-center z-20'>PEEYUSH <br />
+    <h1 className='savo-reg text-[1.6rem] md:text-6xl text-center z-20'>PEEYUSH <br />
     <span className='savo-out'>
         DEHARIYA
     </span>
@@ -22,7 +22,7 @@ export default function Intro() {
         <span className='text-2xl md:py-5 pr-4'>
         <PiDotsThreeOutlineBold/>
         </span>
-        <p className=' max-w-xl mr-16 md:mr-0 lg:max-w-4xl pb-10 text-left md:text-center nice'>
+        <p className=' text-gray-400 max-w-xl mr-16 md:mr-0 lg:max-w-4xl pb-10 text-left md:text-center nice'>
        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, autem? Doloremque cum nulla rem non, reiciendis, totam nobis, expedita culpa fugit magni autem corrupti vitae voluptatibus eos quas! Voluptatem, ipsa?
     </p>
         </div>

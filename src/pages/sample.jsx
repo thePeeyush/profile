@@ -17,7 +17,7 @@ const Sample = () => {
   };
 
   return (
-   <div className="p-8">
+   <div className="px-8 py-2 md:p-8">
     <div
         onMouseEnter={wrap}
         onMouseLeave={unwrap}

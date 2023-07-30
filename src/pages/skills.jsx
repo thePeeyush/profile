@@ -8,13 +8,13 @@ import { SiNextdotjs ,SiExpress ,SiAppwrite } from 'react-icons/si'
 import { BiLogoCPlusPlus ,BiLogoJavascript,BiLogoJava ,BiLogoReact,BiLogoMongodb, BiLogoNodejs, BiLogoGithub } from 'react-icons/bi'
 
 export default function Skills() {
-  return (<div className=' flex flex-col items-center py-10 mt-32 px-6'>
-  <h1 className='text-center savo-3d text-4xl md:text-8xl py-10'>SKILLS</h1>
+  return (<div className=' flex flex-col md:items-center py-10 mt-32 px-6'>
+  <h1 className=' savo-3d text-4xl md:text-8xl px-10'>SKILLS</h1>
   <div className="flex flex-row md:flex-col py-10 md:py-0  md:items-center">
         <span className='text-2xl md:py-5 pr-4'>
         <PiDotsThreeOutlineBold/>
         </span>
-        <p className=' max-w-xl mr-16 md:mr-0 lg:max-w-4xl pb-10 text-left md:text-center nice'>
+        <p className=' max-w-xl text-gray-400 mr-16 md:mr-0 lg:max-w-4xl pb-10 text-left md:text-center nice'>
        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, autem? Doloremque cum nulla rem non, reiciendis, totam nobis, expedita culpa fugit magni autem corrupti vitae voluptatibus eos quas! Voluptatem, ipsa?
     </p>
         </div>
