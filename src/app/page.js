@@ -14,7 +14,7 @@ import Loading from "@/pages/loading";
 import Link from "next/link";
 
 export default function Home() {
-  let counter = 0;
+  let counter = 4;
   const [image, setImage] = useState("");
   const [imghref,setImghref] = useState("");
 
