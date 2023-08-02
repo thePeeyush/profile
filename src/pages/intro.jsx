@@ -23,7 +23,7 @@ export default function Intro() {
         <PiDotsThreeOutlineBold/>
         </span>
         <p className=' text-gray-400 max-w-xl mr-16 md:mr-0 lg:max-w-4xl pb-10 text-left md:text-center nice'>
-        Hello! I am Peeyush Dehariya, a passionate and diligent student at IET DAVV Indore, pursuing a Bachelor's degree in Information Technology. As an aspiring IT professional, I am deeply enthusiastic about technology, innovation, and its application to solve real-world challenges. Throughout my academic journey, I have honed my skills, acquired valuable experiences, and actively engaged in various projects and activities. This portfolio showcases some of my most significant projects, highlighting my capabilities and dedication to the field of Information Technology.
+        Hello! I am Peeyush Dehariya, a passionate and diligent student at IET DAVV Indore, pursuing a Bachelor&#39s degree in Information Technology. As an aspiring IT professional, I am deeply enthusiastic about technology, innovation, and its application to solve real-world challenges. Throughout my academic journey, I have honed my skills, acquired valuable experiences, and actively engaged in various projects and activities. This portfolio showcases some of my most significant projects, highlighting my capabilities and dedication to the field of Information Technology.
     </p>
         </div>
     

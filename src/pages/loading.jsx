@@ -10,7 +10,7 @@ export default function Loading({ counter }) {
     if (screen.width > 500 ) {
       setIsWide(true);
     }
-  })
+  },[])
 
   return (
     <div ref={loaddivref} className=" z-50 flex flex-row overflow-hidden fixed w-full bg-white">
