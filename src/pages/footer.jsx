@@ -10,9 +10,9 @@ export default function Footer() {
                 <h1 className="w-full md:w-2/3 savo-3d"> get in touch</h1>
             </div>
             <div className="flex mt-8 flex-col md:flex-row md:justify-between">
-                <p className="w-full md:w-2/3 text-gray-400 nice">To ensure that all Wikipedia content is verifiable, anyone may question an uncited claim. If your work has been tagged</p>
+                <p className="w-full md:w-2/3 text-gray-400 nice">Feel free to contact me, and I am excited to engage in meaningful conversations with you. Looking forward to hearing from you!</p>
                 <div className="w-44 pt-6 md:pt-0">
-                    <a href='https://t.me/peeyush30' className="bg-white text-black hover:bg-yellow-400 font-semibold nice justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">Contact US</a>
+                    <a href='mailto:peeyushdehariya951@gmail.com' className="bg-white text-black hover:bg-yellow-400 font-semibold nice justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">Contact me</a>
                 </div>
             </div>
             <div className="flex flex-col">
@@ -21,13 +21,13 @@ export default function Footer() {
                         <h1>Peeyush</h1>    
                     </div>
                     <div className="flex flex-row text-2xl space-x-8 items-center justify-center">
-                        <a href='https://www.linkedin.com/in/peeyush-dehariya-445a46213/'>
+                        <a className='hover:text-yellow-400' href='https://www.linkedin.com/in/peeyush-dehariya-445a46213/'>
                             <AiFillLinkedin/>
                         </a>
-                        <a href='https://twitter.com/PeeyushDehariya'>
+                        <a className='hover:text-yellow-400' href='https://twitter.com/PeeyushDehariya'>
                             <AiFillTwitterSquare/>             
                         </a>
-                        <a href="https://www.instagram.com/the_peeyush30/">
+                        <a className='hover:text-yellow-400' href="https://www.instagram.com/the_peeyush30/">
                             <AiFillInstagram/>
                         </a>
                     </div>

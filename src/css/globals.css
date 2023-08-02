@@ -95,17 +95,10 @@ body {
   }
 }
 
-.pdiv.changed-bg{
-  transition: ease-in 2s;
-  background: rgb(60, 60, 60) ;
-  color: black;
-}
-
 .ostrap:hover > .strap{
   transition: ease-in-out .6s;
   transform: translateY(0%);
   z-index: 0;
-
 }
 
 .strap{

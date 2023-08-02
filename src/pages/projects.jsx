@@ -2,7 +2,7 @@ import Project from '@/components/project';
 import data from './projects.json';
 import React, { useRef, useEffect, useState } from 'react';
 
-export default function Projects({setImage}) {
+export default function Projects({setImage,setImghref}) {
   const targetDivRef = useRef(null);
   const [bgColor, setBgColor] = useState('black');
   const [opacity, setOpacity] = useState(0);
@@ -29,6 +29,10 @@ export default function Projects({setImage}) {
         setBgColor('black');
         setOpacity(0)
       }
+
+      if (percentInView < 20) {
+        setImage("")
+      }
     }
   };
 
@@ -51,7 +55,7 @@ export default function Projects({setImage}) {
         {
           data.projects.map((item , index )=>{
             return(
-              <Project text={item.title} href={item.href} key={index} setImage={setImage} image={item.image}/>
+              <Project text={item.title} href={item.href} key={index} setImage={setImage} setImghref={setImghref} image={item.image}/>
             )
           })
         }

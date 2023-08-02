@@ -4,7 +4,7 @@ import { PiDotsThreeOutlineBold, PiGithubLogo } from "react-icons/pi";
 
 export default function Base() {
   return (
-    <div className='flex flex-row gap-10 justify-between nice  md:items-end mx-5 md:mx-20 md:mr-48 my-4 text-white  z-10'>
+    <div className='flex flex-row gap-10 justify-between nice  md:items-end mx-5 md:mx-16 md:mr-48 my-4 text-white  z-10'>
         <Link href="https://github.com/thePeeyush/" className=' text-4xl'><PiGithubLogo/></Link>
         <div className="flex md:flex-row  items-start">
         <span className='text-2xl pr-4'>

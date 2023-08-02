@@ -1,7 +1,6 @@
 "use client";
 
 import Base from "@/components/base";
-import Cursor from "@/components/cursor";
 import Header from "@/components/header";
 import Intro from "@/pages/intro";
 import Projects from "@/pages/projects";
@@ -12,10 +11,12 @@ import Skills from "@/pages/skills";
 import Footer from "@/pages/footer";
 import React, { useEffect, useState } from "react";
 import Loading from "@/pages/loading";
+import Link from "next/link";
 
 export default function Home() {
-  let counter = 4;
+  let counter = 0;
   const [image, setImage] = useState("");
+  const [imghref,setImghref] = useState("");
 
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function Home() {
     <>
     {
       image !== "" && (
+        <Link href={imghref}>
         <Image
         src={image}
         alt="project"
@@ -35,6 +37,7 @@ export default function Home() {
         height={600}
         className="fixed bottom-0 right-0  ease-in-out  -rotate-6 translate-x-32 translate-y-10 shadow-md z-50"
       />
+        </Link>
       )
     }
     <Image
@@ -59,7 +62,7 @@ export default function Home() {
       <div>
         <Intro/>
         <Skills/>
-        <Projects setImage={setImage}/>
+        <Projects setImage={setImage} setImghref={setImghref} />
         <Footer/>
       </div>
     </>

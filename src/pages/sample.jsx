@@ -4,7 +4,6 @@ const Sample = () => {
     document.querySelectorAll(".textref").forEach((e) => {
       e.classList.add("wrap");
       e.classList.remove("unwrap");
-      console.log(e);
     });
   };
 
@@ -12,12 +11,11 @@ const Sample = () => {
     document.querySelectorAll(".textref").forEach((e) => {
       e.classList.add("unwrap");
       e.classList.remove("wrap");
-      console.log(e);
     });
   };
 
   return (
-   <div className="px-8 py-2 md:p-8">
+   <div className="px-8 py-2 md:p-2">
     <div
         onMouseEnter={wrap}
         onMouseLeave={unwrap}

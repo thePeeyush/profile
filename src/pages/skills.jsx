@@ -15,7 +15,7 @@ export default function Skills() {
         <PiDotsThreeOutlineBold/>
         </span>
         <p className=' max-w-xl text-gray-400 mr-16 md:mr-0 lg:max-w-4xl pb-10 text-left md:text-center nice'>
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, autem? Doloremque cum nulla rem non, reiciendis, totam nobis, expedita culpa fugit magni autem corrupti vitae voluptatibus eos quas! Voluptatem, ipsa?
+         I possess proficiency in programming languages such as C++, Java and Javascript along with web development skills in HTML, CSS, React, and Node.js. My expertise extends to database management using SQL, MySQL, and MongoDB. With a strong focus on problem-solving, I am adept at utilizing algorithms and data structures effectively. I am also well-versed in version control using Git.
     </p>
         </div>
   <div className=' flex flex-col lg:flex-row justify-center items-end gap-10'>
